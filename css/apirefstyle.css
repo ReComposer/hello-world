@@ -1,0 +1,359 @@
+﻿/*<meta />*/
+
+@charset "UTF-8";
+
+/* CSS Document */
+/* Used in main API TOC (h1, h2s) */
+
+.apisidetocH1
+{
+	color: #2090CE !important;
+	line-height: 1.1em !important;
+}
+
+.apisidetocH2
+{
+	padding-left: 20px !important;
+	list-style-type: none;
+}
+
+var 
+{
+	/* font-weight: bold; */
+	/* font-style: italic; */
+	/* color: #132; */
+	/* text-shadow: 0 0 1px #dcb; */
+}
+
+/*Used to style resource-specific mini-tocs */
+
+.apiminitocH4
+{
+	padding-left: 20px !important;
+	font-size: 13px !important;
+	line-height: 1.1em !important;
+}
+
+.apiminitocH3
+{
+	line-height: 1.1em !important;
+}
+
+p.apichangelog
+{
+	font-weight: bold;
+	font-size: 16px;
+	color: #6c6c6c !important;
+}
+
+/* changing menu div in API side bar */
+
+#date
+{
+	position: fixed;
+	color: #000;
+	width: 250px;
+	backface-visibility: hidden;
+   -webkit-backface-visibility: hidden;
+   -webkit-perspective: 1000;
+}
+
+/* return to top/resource list buttons in API side bar */
+
+/* a.returntotop,
+a.returntooverview
+{
+	text-decoration: none !important;
+	color: #FFFFFF !important;
+	display: block;
+	width: 150px;
+	padding: 10px;
+	background: #dbdbdb;
+	background: #abb2bd;
+	z-index: 1;
+	margin: 10px 10px 10px 0px;
+	border-radius: 4px;
+	box-shadow: inset 1px 1px 15px #89919e;
+	text-shadow:
+		-1px -1px 0 #999,
+		1px -1px 0 #999,
+		-1px 1px 0 #999,
+		1px 1px 0 #999;
+}
+
+a.returntotop:before
+{
+	font-family: "Ionicons";
+	content: "\f10e";
+	font-size: 23px;
+	width: auto;
+	float: left;
+	color: #FFFFFF;
+	margin: -5px 10px;
+}
+
+a.returntooverview:before
+{
+	font-family: "Ionicons";
+	content: "\f108";
+	font-size: 23px;
+	width: auto;
+	float: left;
+	color: #FFFFFF;
+	margin: -5px 10px;
+	margin: 0 10px -5px 10px;
+}
+
+a.returntooverview:hover, 
+a.returntotop:hover
+{
+	box-shadow: inset 1px 1px 15px #99a1ae;
+	text-shadow:
+		-1px -1px 0 #888,
+		1px -1px 0 #888,
+		-1px 1px 0 #888,
+		1px 1px 0 #888;
+} */
+
+/* return to top/resource list buttons in API side bar */
+
+a.returntotop,
+a.returntooverview
+{
+    background: #3482bc;
+    background: -ms-linear-gradient(top, #3482bc 0%, #245b84 100%);
+    background: linear-gradient(to bottom, #3482bc 0%, #245b84 100%);
+    border: 1px solid #3482bc;
+    color: #fff;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13.5px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+	width: 150px;
+    height: 30px;
+    line-height: 18px;
+    padding: 5px 6px;
+	margin: 10px 0;
+	z-index: 1;
+	white-space: nowrap
+}
+
+a.returntotop:before
+{   /* up ▲ */
+	font-family: "Ionicons";
+	content: "\f10e";
+	font-size: 13.5px;
+	width: auto;
+	float: left;
+	color: #fff;
+	margin: 0 10px -5px 10px;
+}
+
+a.returntooverview:before
+{   /* left ◄ */
+	font-family: "Ionicons";
+	content: "\f108";
+	font-size: 13.5px;
+	width: auto;
+	float: left;
+	color: #fff;
+	margin: 0 10px -5px 10px;
+}
+
+a.returntooverview:hover, 
+a.returntotop:hover
+{
+	background: #3482bc;
+	text-decoration: none;
+}
+
+.datecontents
+{
+	margin-top: 10px;
+}
+
+#toc.contents
+{
+	display: none;
+}
+
+/* resource-specific mini-toc styling at full-wdith */
+
+.snippetcontents > .contents > .returntotop
+{
+	display: none;
+}
+
+.snippetcontents > .contents
+{
+	visibility: hidden;
+	height: 1px;
+	margin-top: -20px;
+}
+
+@media only screen and (max-width: 880px)
+{
+	#date
+	{
+		width: 150px;
+	}
+}
+
+@media only screen and (max-width: 991px)
+{
+	.snippetcontents > .contents > .returntotop
+	{
+		display: block;
+	}
+
+	.snippetcontents > .contents
+	{
+		visibility: visible;
+		height: auto;
+		margin-top: 10px;
+	}
+
+	#date
+	{
+		display: none;
+	}
+
+	#toc.contents
+	{
+		display: block;
+	}
+}
+
+.stick
+{
+	position: fixed;
+	top: 0;
+}
+
+/* Unique heading for API H1s so this title doesn't appear in the auto-generated Flare TOC*/
+
+.apititle
+{
+	font: bold 2.5em Helvetica, Arial, sans-serif !important;
+	margin: 40px 0 8px 0 !important;
+}
+
+/* Unique heading for API H6s so this title doesn't appear in the auto-generated Flare TOC*/
+
+.apicontents
+{
+	font: bold 1.2em Helvetica, Arial, sans-serif !important;
+	color: #000;
+	margin-top: .5em;
+	margin-left: -20px !important;
+	margin-bottom: 10px;
+}
+
+/* Formatting for API request and response examples */
+
+.apirequest
+{
+	border: solid 1px #ccc;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	border-bottom: none;
+	padding: 10px;
+	margin-top: 10px;
+}
+
+.apiresponse
+{
+	background-color: #f3f3f3;
+	border: solid 1px #ccc;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	padding: 10px;
+	margin-bottom: 30px;
+}
+
+.apiresponse dropDownBody 
+{
+	border: none;
+}
+
+.apirequest dropDown
+{
+	padding: 10px;
+	mc-closed-image: url('../images/help-icn-down_arrow.png');
+	mc-open-image: url('../images/help-icn-up_arrow.png');
+	background-size: 18px;
+	mc-image-spacing: 0px;
+	border-color: #e7e7ff;
+}
+
+
+.apiresponse pre.highlight
+{
+	border-radius: 3px;
+	background-color: #fcfdff;
+	border: 0.5px solid #d7e0e7;
+	box-shadow: inset 0 0 6px #dcdae6;
+}
+
+.apirequest p 
+{
+	margin:4px 0 0 0!important;
+}
+
+.apirequest h5
+{
+	font-weight: normal !important;
+	color: #777 !important;
+}
+
+.apiresponse h5
+{
+	font-weight: normal !important;
+	color: #777 !important;
+}
+
+.apiresponse table
+{
+	background-color: #fcfcfc;
+}
+
+.apirequest .table-row
+{
+	border: 1px solid #e7e7e7;
+	border-top: none;
+}
+
+.apirequest .table-cell
+{
+	border-top: none;
+}
+
+.apirequest .table-header 
+{
+	border-top: 1px solid #CCC;
+	border-left: 1px solid #CCC;
+	border-right: 1px solid #CCC;
+}
+
+table
+{
+	border: 1px solid #CCC;
+}
+
+table th
+{
+	text-align: left;
+	border-left: 0px;
+	border-right: 0px;
+}
+
+table tr td
+{
+	border-left: 0px;
+	border-right: 0px;
+}
